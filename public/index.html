@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WARPOINT ARENA - Турнирный менеджер VR арены</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Rajdhani", sans-serif;
+      }
+      .font-orbitron {
+        font-family: "Orbitron", sans-serif;
+      }
+      .font-rajdhani {
+        font-family: "Rajdhani", sans-serif;
+      }
+
+      /* Кастомные анимации */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-from-bottom-4 {
+        from {
+          transform: translateY(1rem);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-from-top-2 {
+        from {
+          transform: translateY(-0.5rem);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes zoom-in {
+        from {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .animate-in {
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+      }
+      .fade-in {
+        animation-name: fade-in;
+      }
+      .slide-in-from-bottom-4 {
+        animation-name: slide-in-from-bottom-4;
+      }
+      .slide-in-from-top-2 {
+        animation-name: slide-in-from-top-2;
+      }
+      .zoom-in {
+        animation-name: zoom-in;
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .delay-1000 {
+        animation-delay: 1s;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Backdrop blur support */
+      .backdrop-blur-sm {
+        backdrop-filter: blur(4px);
+      }
+      .backdrop-blur-md {
+        backdrop-filter: blur(8px);
+      }
+      .backdrop-blur-xl {
+        backdrop-filter: blur(16px);
+      }
+
+      body {
+        background: linear-gradient(135deg, #050a0f 0%, #0a1520 100%);
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
